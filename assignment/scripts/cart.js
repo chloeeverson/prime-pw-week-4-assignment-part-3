@@ -22,22 +22,46 @@ console.log(`Basket is now ${basket}`);
 //   console.log(basket[i]);
 //   }
 // }
+//
+// console.log('items banana and apples should be listed on seperate lines:' , listItems());
 
-function listItems() {
-  for (let i = 0; i<basket.length; i++ ){
-  return basket[i]
-  }
-}
-
-console.log('items banana and apples should be listed on seperate lines:' , listItems());
+// function listItems() {
+//   for (let i = 0; i<basket.length; i++ ){
+//   return basket[i]
+//   }
+// }
+//
+// console.log('items banana and apples should be listed on seperate lines:' , listItems());
 
 // function listItems() {
 //   for (item of basket) {
 //     console.log(item);
 //   }
 // }
-// console.log(listItems());
+// console.log('items banana and apples should be listed on seperate lines:' , listItems());
 
+// function listItems() {
+//   for (item of basket) {
+//     console.log(item);
+//     return item;
+//   }
+// }
+// console.log('items banana and apples should be listed on seperate lines:' , listItems());
+
+// function listItems() {
+//   for (item of basket) {
+//     let answer = console.log(item);
+//     return answer
+//   }
+// }
+// console.log('items banana and apples should be listed on seperate lines:' , listItems());
+
+function listItems() {
+  for (item of basket) {
+    return item
+  }
+}
+console.log('items banana and apples should be listed on seperate lines:' , listItems());
 
 function empty(){
   while (basket.length > 0) {
@@ -47,3 +71,6 @@ function empty(){
 }
 
 console.log('basket should be empty:' , empty());
+console.log('adding item tomato. expect true for add:' , addItem('tomato'));
+console.log('list should now be tomato:' , listItems());
+console.log('emptying cart, array should be empty:' , empty());
