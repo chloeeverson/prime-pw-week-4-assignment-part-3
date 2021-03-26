@@ -10,6 +10,8 @@ function addItem( item ) {
     return false;
   }
 }
+//function should add the item that I call below to the basket array. If I add it the console should return true. If I don't add an item it should return false.
+
 console.log('added item? no item expect false' , addItem());
 console.log(`Basket is ${basket}`);
 console.log('added item? Adding bananas (expect true)', addItem('bananas'));
@@ -17,51 +19,19 @@ console.log(`Basket is now ${basket}`);
 console.log('added item? Adding apples (expect true)', addItem('apples'));
 console.log(`Basket is now ${basket}`);
 
-// function listItems() {
-//   for (let i = 0; i<basket.length; i++ ){
-//   console.log(basket[i]);
-//   }
-// }
-//
-// console.log('items banana and apples should be listed on seperate lines:' , listItems());
-
-// function listItems() {
-//   for (let i = 0; i<basket.length; i++ ){
-//   return basket[i]
-//   }
-// }
-//
-// console.log('items banana and apples should be listed on seperate lines:' , listItems());
-
-// function listItems() {
-//   for (item of basket) {
-//     console.log(item);
-//   }
-// }
-// console.log('items banana and apples should be listed on seperate lines:' , listItems());
-
-// function listItems() {
-//   for (item of basket) {
-//     console.log(item);
-//     return item;
-//   }
-// }
-// console.log('items banana and apples should be listed on seperate lines:' , listItems());
-
-// function listItems() {
-//   for (item of basket) {
-//     let answer = console.log(item);
-//     return answer
-//   }
-// }
-// console.log('items banana and apples should be listed on seperate lines:' , listItems());
-
 function listItems() {
-  for (item of basket) {
-    return item
+  for (let i = 0; i<basket.length; i++ ){
+  console.log(basket[i]);
   }
 }
-console.log('items banana and apples should be listed on seperate lines:' , listItems());
+//function should loop through the items(values) in the basket array and console.log(list out in console) each item on a seperate line when function is ran. It should return undefined.
+console.log('this is the current value of "basket": ', basket);
+console.log('this is what happens when listItems() runs:')
+listItems();
+console.log('the value that listItems() returns:', listItems())
+console.log('items bananas and apples should be listed on seperate lines:')
+listItems();
+
 
 function empty(){
   while (basket.length > 0) {
@@ -69,7 +39,7 @@ function empty(){
   }
   return basket
 }
-
+//function should empty the basket array so there are no longer any items in the array. It should return what is currently in the basket array when function is called.
 console.log('basket should be empty:' , empty());
 console.log('adding item tomato. expect true for add:' , addItem('tomato'));
 console.log('list should now be tomato:' , listItems());
